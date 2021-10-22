@@ -1,0 +1,43 @@
+/* 웹폰트 CSS */
+
+
+/* NotoSans */
+@font-face	{
+	font-family:'NotoSansCJKkr-Light';
+	src:url('font/Noto/NotoSansCJKkr-Light.eot');
+	src:local('NotoSansCJKkr-Light'), url('font/Noto/NotoSansCJKkr-Light.woff') format('woff');
+} 
+@font-face	{
+	font-family:'NotoSans-Regular';
+	src:url('font/Noto/NotoSans-Regular.eot');
+	src:local('NotoSans-Regular'), url('font/Noto/NotoSans-Regular.woff') format('woff');
+} 
+@font-face	{
+	font-family:'NotoSans-Medium';
+	src:url('font/Noto/NotoSans-Medium.eot');
+	src:local('NotoSans-Medium'), url('font/Noto/NotoSans-Medium.woff') format('woff');
+}
+@font-face	{
+	font-family:'NotoSansCJKkr-DemiLight';
+	src:url('font/Noto/NotoSansCJKkr-DemiLight.eot');
+	src:local('NotoSansCJKkr-DemiLight'), url('font/Noto/NotoSansCJKkr-DemiLight.woff') format('woff');
+}
+
+/* gotham */
+@font-face	{
+	font-family:'GothamBook';
+	src:url('font/gotham/GothamBook.eot');
+	src:local('GothamBook'), url('font/gotham/GothamBook.woff') format('woff');
+}
+@font-face	{
+	font-family:'gothambold';
+	src:url('font/gotham/gothambold.eot');
+	src:local('gothambold'), url('font/gotham/gothambold.woff') format('woff');
+}
+@font-face	{
+	font-family:'Gotham-Medium';
+	src:url('font/gotham/Gotham-Medium.eot');
+	src:local('Gotham-Medium'), url('font/gotham/Gotham-Medium.woff') format('woff');
+}
+
+

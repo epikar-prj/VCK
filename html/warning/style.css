@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* 공통 */
+.btn_group {display: flex;}
+.btn { transition: 0.2s; display: flex; flex: 1; justify-content: center; align-items: center; font-size: 16px; font-weight: 500; color: #252f62; border: 1px solid #252f62; border-radius: 4px; height: 45px; }
+.btn + .btn {margin-left: 5px;}
+.btn:active { background-color: rgba(0, 0, 0, .05); }
+.bg_color1 {background: #252f62;}
+.bg_color1 {color: #fff;}
+.btn.bg_color1:active {background-color: rgba(37, 47, 98, 0.8);}
+
+/*header {display:none;}*/
+
+
+.warning_tab {margin-top:10px;}
+.warning_tab .btn {border:1px solid #707070;color:#707070; font-weight:400; font-size:15px;letter-spacing: -.8px;}
+.warning_tab .btn.on{color:#fff; background:#141414;}
+
+.warning_tab_content {display:none;}
+.warning_tab_content.on {display:block;}
+.warning_tab_content .top_text {padding: 22px 15px;font-size:15px;line-height:1.5;font-weight:300;letter-spacing: -0.03em;word-break: keep-all;text-align: center;}
+.warning_tab_content .light_list li {border-top:1px solid #e3e3e3; position:relative;}
+.warning_tab_content .light_list li:last-child {border-bottom:1px solid #e3e3e3;}
+.warning_tab_content .light_list li a {padding:15px 10px; display:flex; align-items:center;}
+.warning_tab_content .light_list li a img {width:30px;}
+.warning_tab_content .light_list li a span {flex:1;margin:0 10px;font-size: 16px;letter-spacing: -0.03em;font-weight: 400;line-height: 1.3;word-break: keep-all;}
+.warning_tab_content .light_list li a:after {display: block; content: ""; position: absolute; top: 25px; right: 3px; width: 18px; height: 10px; background-image: url(/images/common/select_arr.png); background-repeat: no-repeat; background-size: 100%; }
+
+.warning_tab_content .light_list li a.on:after {transform:rotate(180deg);}
+.warning_tab_content .light_list li p {font-size: 14px;padding:10px;padding-top:0;line-height:1.5;color: #777777;font-weight: 300;letter-spacing: -0.03em;display: none;}
+.warning_tab_content .sub_tab {display:flex;margin-bottom: 15px;}
+.warning_tab_content .sub_tab a {flex: 1;font-weight:400;font-size:16px; color:#707070;padding:15px 0;text-align:center;border-bottom: 1px solid #e3e3e3;}
+.warning_tab_content .sub_tab a.on{ border-bottom: 2px solid #1868b9; color:#141414; font-weight:500; }
+.warning_tab_content .sub_tab a:active{background-color: rgba(0, 0, 0, .05);}
+.warning_tab_content .light_wrap {display:none;}
+.warning_tab_content .light_wrap.on {display:block;}
+.warning_tab_content .light_wrap h4 {padding: 15px;font-weight:400;font-size:16px;letter-spacing:-0.03em;}

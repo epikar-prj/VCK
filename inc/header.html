@@ -1,0 +1,111 @@
+<?php
+$navi_class1 = ""; $navi_class2 = "";
+if( $bm_sid == "2"){													//갤러리
+	$mbanner_stitle_code = $OPTION_INFO['mbanner_stitle_code']['G'];
+	$file_img = "../images/layout/sub_visual_tp6.jpg";
+	$navi_class2 = ' class="on"'; $subVisual_class = "tp6";
+}else{
+	$mbanner_stitle_code = $OPTION_INFO['mbanner_stitle_code']['C'];
+	$file_img = "../images/layout/sub_visual_tp2.jpg";
+	$navi_class1 = ' class="on"'; $subVisual_class = "tp2";
+}
+
+$FILE_OPTION['mbanner_file_folder'] = $FILE_OPTION['mbanner_' . $mbanner_stitle_code . '_file_folder'];
+$FILE_OPTION['mbanner_file_read'] = $FILE_OPTION['mbanner_' . $mbanner_stitle_code . '_file_read'];
+
+// 자료 검색(Sub Visual 이미지)
+$query_mimg = "SELECT `sid`, `code`, `type`, `files` FROM {$TABLE_INFO['main_banner']} WHERE chkdel='N' AND code='{$mbanner_stitle_code}' AND `type`='P' ORDER BY regdate DESC LIMIT 1";
+$row_mimg=$db->row($query_mimg);
+
+if( trim($row_mimg['files']) ){
+	$file_info = explode("|", $row_mimg['files']);
+	$filename_up = $file_info[0];
+	$filename = $file_info[1];
+	$fileext = $file_info[3];
+
+	if( $fileext == "jpeg" || $fileext == "jpg" || $fileext == "gif" || $fileext == "png" || $fileext == "bmp" ){
+		if( $filename_up && file_exists($FILE_OPTION['mbanner_file_folder'] . "/" . $filename_up) ){
+			$filename_up_thum = MgImgThumbnailName($filename_up, "");
+
+			if($filename){
+				$files_wh_thum = getimagesize("{$FILE_OPTION['mbanner_file_folder']}/thumbnail/{$filename_up_thum}");
+				//if($files_wh_thum[0] <= $thum_width){ $thum_width = $files_wh_thum[0]; }
+				$file_img = "{$FILE_OPTION['mbanner_file_read']}/thumbnail/{$filename_up_thum}";
+			}
+
+		}
+	}
+}
+?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>VOLVO</title>
+		<!-- 공통적용헤더정보 -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!-- //공통적용헤더정보 -->
+		<meta name="Description" content="Volvo">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Volvo Cross Country">
+		<meta property="og:description" content="Volvo">
+		<meta property="og:image" content="http://volvo-crosscountry.com/mobile/images/common/Marketlaunch_V90CC_Bridge_WithoutKayak.jpg">
+		<meta property="og:url" content="">
+		<meta property="og:site_name" content="Volvo">
+		<meta name="Keywords" content="Volvo">
+		<meta name="Author" content="Bdot">
+		<meta name="robots" content="ALL">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+		<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="../js/TweenMax/TweenMax.min.js"></script>
+		<script type="text/javascript" src="../js/TweenMax/TimelineLite.min.js"></script>
+		<script type="text/javascript" src="../js/TweenMax/easing/EasePack.min.js"></script>
+		<script type="text/javascript" src="../js/volvo_b.js"></script>
+		<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=28f65fbb6c5e9fe50e926d5bc10db3b2"></script>
+		<!--[if lt IE 9]>
+			<script src="../js/html5.js"></script>
+			<script src="../js/lib/placeholders.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="../css/style.css">
+
+		<!-- 구글 애널리스틱 - 추적코드 -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-96636609-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<!-- 구글 애널리스틱 - 추적코드 -->
+	</head>
+<body>
+	<!-- header -->
+	<header>
+		<div class="header_wrap">
+			<h1 id="logo"><img src="../images/layout/logo.png" alt="Volvo"></img></h1>
+			<nav>
+				<ul>
+					<li><a href="/">HOME</a></li>
+					<li><a href="../event_info.html">행사안내</a></li>
+					<li><a href="../bbs/?bm_sid=1"<?=$navi_class1?>>공지사항</a></li>
+					<li><a href="../brochure_download.html">브로슈어</a></li>
+					<li><a href="../trial_ride.html">시승신청</a></li>
+					<li><a href="../showroom_info1.html">전시장안내</a></li>
+					<li><a href="../bbs/?bm_sid=2"<?=$navi_class2?>>갤러리</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- //header -->
+	<!-- content -->
+	<div id="container">
+		<div class="subVisual <?=$subVisual_class?>">
+			<div class="subVisual_bg" style="background:url('<?=$file_img?>') center center no-repeat; background-size: cover;"></div>
+		</div>
+
+		

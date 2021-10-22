@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* 공통 */
+.btn_group {display: flex;}
+.btn { transition: 0.2s; display: flex; flex: 1; justify-content: center; align-items: center; font-size: 16px; font-weight: 500; color: #252f62; border: 1px solid #252f62; border-radius: 5px; height: 45px; }
+.btn + .btn {margin-left: 5px;}
+.btn:active { background-color: rgba(0, 0, 0, .05); }
+.bg_color1 {background: #252f62;}
+.bg_color1 {color: #fff;}
+.btn.bg_color1:active {background-color: rgba(37, 47, 98, 0.8);}
+
+/*header {display:none;}*/
+
+#breadcrumb h4 {width:calc(100% - 90px); text-align:center; font-weight:200;}
+
+.container {padding-top:10px;}
+
+.search_wrap {width:100%; height:45px; background-color:#eeeeee; border-radius:5px; margin-bottom:20px; }
+.search_wrap:after {clear:both; display:block; content:"";}
+.search_wrap input.search_input {width:calc(100% - 48px); height:45px; line-height:45px; float:left; padding-left:20px; font-size:15px; font-weight:300; color:#141414; }
+.search_wrap input.search_input::placeholder { color:#141414; font-size:15px; font-weight:300;}
+.search_wrap .btn_search {width:48px; height:45px; float:left; }
+.search_wrap .btn_search a {display:block; width:100%; height:100%; background-image:url(/images/faq/btn_search.png); background-repeat:no-repeat; background-position:center;}
+
+ul.faq_tab {width:100%; margin-bottom:20px; border-top:solid 1px #e3e3e3;border-right:solid 1px #e3e3e3;}
+ul.faq_tab:after {clear:both; display:block; content:"";}
+ul.faq_tab li {float:left; width: calc(100% / 3); height:40px; border-left:solid 1px #e3e3e3; border-bottom:solid 1px #e3e3e3;}
+ul.faq_tab li:nth-child(1) { width: calc(100% / 3); }
+ul.faq_tab li:nth-child(2) { width: calc((100% / 3) * 2); }
+ul.faq_tab li a {display: flex; justify-content: center; align-items: center; width:100%; height:100%; text-align:center; font-size:15px; color:#707070; letter-spacing:-.8px; }
+ul.faq_tab li.ov a {color:#fff; background-color:#141414; font-weight:400;}
+ul.faq_tab li:active a {color:#fff; background-color:#141414;}
+
+.cont_list_wrap {width:100%; border-top:solid 1px #e3e3e3;}
+ul.cont_list {width:100%; margin-bottom:20px;}
+ul.cont_list:after {clear:both; display:block; content:"";}
+ul.cont_list li {width:100%; border-bottom:solid 1px #e3e3e3; padding:0 0 10px; }
+ul.cont_list li.empty {padding:50px 0; text-align:center; font-size:15px;}
+ul.cont_list li .list_ti {position:relative; width:100%; text-indent:-18px; padding:20px 30px 10px 18px; word-break:keep-all; letter-spacing:-.8px; line-height:1.4; font-size:16px; color:#141414; font-weight:300;  }
+ul.cont_list li .list_ti:after {display:block; content:""; position:absolute; top:25px; right:0px; width:18px; height:10px; background-image:url(/images/common/select_arr.png) ; background-repeat:no-repeat; background-size:100%; }
+ul.cont_list li.ov .list_ti:after {background-image:url(/images/common/select_arr_active.png); }
+
+ul.cont_list li .list_txt { display:none; font-size:14px; font-weight:300; color:#707070; padding-left:4px; letter-spacing:-.8px; line-height:1.6; word-break:break-all; padding-bottom:20px; padding-top:10px; }
+ul.cont_list li .list_txt p,
+ul.cont_list li .list_txt span { line-height:1.6; }
+ul.cont_list li.ov .list_txt {display:block;}
+
+.paging_wrap {position:relative; text-align:center; padding-bottom:20px;}
+.paging_wrap:after {display:block; clear:both; content:"";}
+.paging_wrap .btn_prev {display:inline-block; width:5px; height:10px; background:url(/images/faq/paging_btn_prev.png) no-repeat center;}
+.paging_wrap .btn_next {display:inline-block; width:5px; height:10px; background:url(/images/faq/paging_btn_next.png) no-repeat center;}
+.paging_wrap ul.paging {display:inline-block; padding:0 14px;}
+.paging_wrap ul.paging li {display:inline-block; padding:0 3px; color:#b2b2b2;}
+.paging_wrap ul.paging li.ov a {color:#141414;}
+.paging_wrap ul.paging li:active a {color:#141414;}

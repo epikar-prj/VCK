@@ -1,0 +1,15 @@
+html.ie8 .radio-label:after,
+html.ie8 .check-label:after {
+  display: none;
+}
+
+html.ie8 .login-form .input {
+  line-height: 34px;
+}
+
+html.ie8 .select,
+html.ie8 .input {
+  line-height: 28px;
+}
+
+/*# sourceMappingURL=ie8.css.map */

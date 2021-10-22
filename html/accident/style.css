@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* 공통 */
+.mv20 { margin: 20px 0; }
+.mt30 { margin-top: 30px; }
+.btn_group { display: flex; }
+.btn { letter-spacing: -.8px; transition: 0.2s; display: flex; flex: 1; justify-content: center; align-items: center; font-size: 16px; font-weight: 500; color: #252f62; border: 1px solid #252f62; border-radius: 5px; height: 45px; }
+.btn + .btn { margin-left: 5px; }
+.btn:active { background-color: rgba(0, 0, 0, .05); }
+.bg_color1 { background: #252f62; }
+.bg_color1 { color: #fff; }
+.btn.bg_color1:active { background-color: rgba(37, 47, 98, 0.9); }
+
+
+#visual { padding: 0 10px; }
+#visual img { overflow: hidden; border-radius: 10px; }
+#visual .tit {letter-spacing: -.04em; background: #284e80;color: #fff;font-size: 18px;font-weight: 400;height: 40px; line-height:40px; display: flex;justify-content: center;align-items: center;border-radius: 5px;margin-top: -20px;position: relative;margin-left: 10px;margin-right: 10px;box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); margin-bottom:10px;}
+#visual .tit:before { content: ''; display: block; width: 20px; height: 20px; background: url(/images/emergency/ico_call.png) no-repeat center / 20px auto; margin-right: 10px; }
+
+
+.tab { margin-top: 20px; margin-bottom: 20px; display: flex; border-bottom: 1px solid #e3e3e3; padding-bottom: 22px; }
+.tab li { word-break: keep-all; text-align: center; align-items: center; flex-direction: column; display: flex; flex: 1; font-size: 14px; color: #acacac; letter-spacing: -.8px; line-height: 1.2; }
+.tab li a { transition: 0.2s; position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; font-weight: 400; }
+.tab li a i { margin-bottom: 10px; width: 70px; height: 70px; border: 2px solid #e3e3e3; border-radius: 10px; }
+.tab li a.on { color: #141414; }
+.tab li a.on i { border-color: #1868b9 }
+.tab li:nth-child(1) a i { background: url(/images/accident/ico_1.png) no-repeat center / auto 50px; }
+.tab li:nth-child(2) a i { background: url(/images/accident/ico_2.png) no-repeat center / auto 28px; }
+.tab li:nth-child(3) a i { background: url(/images/accident/ico_3.png) no-repeat center / auto 40px; }
+.tab li:nth-child(1) a.on i { background: url(/images/accident/ico_1_on.png) no-repeat center / auto 50px; }
+.tab li:nth-child(2) a.on i { background: url(/images/accident/ico_2_on.png) no-repeat center / auto 28px; }
+.tab li:nth-child(3) a.on i { background: url(/images/accident/ico_3_on.png) no-repeat center / auto 40px; }
+/* .tab li a:after { position: absolute; top: -10px; right: -10px; left: -10px; bottom: -10px; border-radius: 10px; content: ''; display: block; } */
+/* .tab li a:active:after { background-color: rgba(0, 0, 0, .05); } */
+
+.tab_cont { display: none; animation-name: show; animation-duration: 0.2s; }
+.tab_cont.on { display: block; }
+.tab_cont .box {padding: 20px;border-radius: 10px;background: #fff;border: 1px solid #e3e3e3;}
+.tab_cont .box + .box { margin-top: 10px; }
+.tab_cont .box h6 { text-align: center; font-size: 17px; font-weight: 500; font-family: "VolvoNovum", "NotoSansCJK", "sans-serif"; margin-bottom: 20px; letter-spacing: -.8px; }
+.tab_cont .box ul li { display: flex; align-items: top; }
+.tab_cont .box ul li + li { margin-top: 17px; }
+.tab_cont .box ul li strong { margin-top: 3px; font-size: 13px; font-weight: 500; color: #141414; width: 50px; letter-spacing: -.8px; }
+.tab_cont .box ul li span { word-break: keep-all; font-size: 15px; font-weight: 400; color: #707070; flex: 1; letter-spacing: -.8px; line-height: 1.4; }
+.tab_cont .box ul li a {background: #fff;width: 200px;height: 35px;color: #1868b9;font-size: 16px;font-weight: 500;border: 1px solid #1868b9;border-radius: 5px;display: flex;justify-content: center;align-items: center;margin: 0 auto;margin-top: -10px;}
+.tab_cont .box ul li a:active { background-color: rgba(0, 0, 0, .05); }
+.tab_cont .box ul li a i { width: 20px; height: 20px; background: url(/images/accident/ico_call.png) no-repeat center / auto 20px; margin-right: 8px; }
+.tab_cont .box p { font-size: 15px; line-height: 1.4; font-weight: 400; color: #707070; word-break: keep-all; }
+.tab_cont > p { color: #777; font-size: 13px; margin-top: 16px; text-align: center; line-height: 1.4; font-weight: 300; }
+
+
+#callcenter_pop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); z-index: 999; }
+#callcenter_pop .call_wrap { display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; padding: 25px 20px 20px; width: calc(100% - 40px); max-height: calc(100vh - 150px); border-radius: 10px; background-color: #fff; transform: translate(-50%, -50%); }
+#callcenter_pop .call_wrap .top { display: flex; justify-content: flex-start; align-items: center; padding-bottom: 25px; }
+#callcenter_pop .call_wrap .top img { margin-right: 8px; width: 21px; }
+#callcenter_pop .call_wrap .top strong { font-size: 18px; color: #141414; font-weight: 500; letter-spacing: -.8px; }
+#callcenter_pop .call_wrap .middle { flex-grow: 1; overflow-y: auto; }
+#callcenter_pop .call_wrap .middle::-webkit-scrollbar { display: none; }
+#callcenter_pop .call_wrap .middle .call_list { border-top: 1px solid #e3e3e3; }
+#callcenter_pop .call_wrap .middle .call_list ul li { display: flex; justify-content: space-between; align-items: center; height: 58px; border-bottom: 1px solid #e3e3e3; }
+#callcenter_pop .call_wrap .middle .call_list ul li .box-txt {  }
+#callcenter_pop .call_wrap .middle .call_list ul li .box-txt p { margin-bottom: 6px; font-size: 16px; color: #141414; letter-spacing: -.8px; }
+#callcenter_pop .call_wrap .middle .call_list ul li .box-txt span { font-size: 13px; color: #707070; letter-spacing: -.8px; }
+#callcenter_pop .call_wrap .middle .call_list ul li .box-btn {}
+#callcenter_pop .call_wrap .middle .call_list ul li .box-btn a { display: flex; justify-content: center; align-items: center; width: 70px; height: 30px; border: 1px solid #1868b9; border-radius: 5px; font-size: 13px; color: #1868b9; font-weight: 500; letter-spacing: -.8px; }
+#callcenter_pop .call_wrap .middle .call_list ul li .box-btn a img { margin-right: 6px; width: 18px; }
+#callcenter_pop .call_wrap .close { position: absolute; top: 27px; right: 20px; }
+#callcenter_pop .call_wrap .close img { margin-right: 0; width: 16px; }
+
+@keyframes show {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}

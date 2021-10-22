@@ -1,0 +1,91 @@
+/* NOTOSANS */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: 'NotoSansCJK';
+    font-weight: 100;
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Thin.eot');
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Thin.eot') format('embedded-opentype'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Thin.woff') format('woff'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Thin.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSansCJK';
+    font-weight: 200;
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Light.eot');
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Light.eot') format('embedded-opentype'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Light.woff') format('woff'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Light.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSansCJK';
+    font-weight: 300;
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-DemiLight.eot');
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-DemiLight.eot') format('embedded-opentype'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-DemiLight.woff') format('woff'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-DemiLight.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSansCJK';
+    font-weight: 400;
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.eot');
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.eot') format('embedded-opentype'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.woff') format('woff'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSansCJK';
+    font-weight: 500;
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.eot');
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.eot') format('embedded-opentype'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.woff') format('woff'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.otf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'NotoSansCJK';
+    font-weight: 700;
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.eot');
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.eot') format('embedded-opentype'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.woff') format('woff'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSansCJK';
+    font-weight: 900;
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Black.eot');
+    src: url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Black.eot') format('embedded-opentype'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Black.woff') format('woff'),
+    url('../fonts/NotoSansCJKkr/NotoSansCJKkr-Black.otf') format('truetype');
+}
+
+@font-face{
+    font-family:'VolvoNovum';
+    src:url('../fonts/VolvoNovum/VolvoNovum-Regular.eot');
+    src:url('../fonts/VolvoNovum/VolvoNovum-Regular?#iefix') format('embedded-opentype'),url('../fonts/VolvoNovum/VolvoNovum-Regular.woff') format('woff'),url('../fonts/VolvoNovum/VolvoNovum-Regular.svg#Volvo-Novum-Regular') format('svg');
+    font-weight: 400;
+    font-style:normal
+}
+
+@font-face{
+    font-family:'VolvoNovum';
+    src:url('../fonts/VolvoNovum/VolvoNovum-SemiLight.eot');
+    src:url('../fonts/VolvoNovum/VolvoNovum-SemiLight?#iefix') format('embedded-opentype'),url('../fonts/VolvoNovum/VolvoNovum-SemiLight.woff') format('woff'),url('../fonts/VolvoNovum/VolvoNovum-SemiLight.svg#Volvo-Novum-SemiLight') format('svg');
+    font-weight: 200;
+    font-style:normal
+}
+
+@font-face{
+    font-family:'VolvoNovum';
+    src:url('../fonts/VolvoNovum/VolvoNovum-Medium.eot');
+    src:url('../fonts/VolvoNovum/VolvoNovum-Medium.eot?#iefix') format('embedded-opentype'),url('../fonts/VolvoNovum/VolvoNovum-Medium.woff') format('woff'),url('../fonts/VolvoNovum/VolvoNovum-Medium.svg#Volvo-Novum-Medium') format('svg');
+    font-weight: 500;
+    font-style:normal
+}

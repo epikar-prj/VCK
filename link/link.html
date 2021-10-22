@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" />
+    <title>Hej Volvo</title>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+	<script>
+		$(window).on('load',function(){
+		   var varUA = navigator.userAgent.toLowerCase(); //userAgent 값 얻기
+//			alert(varUA);
+//			 console.log(varUA);
+			if ( varUA.indexOf('android') > -1) {
+				location.replace('https://play.google.com/store/apps/details?id=com.volvocars.vcksmart');
+//				location.replace('market://details?id=com.volvocars.vcksmart');
+			} else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
+				location.replace('https://apps.apple.com/kr/app/volvo-car-service/id1198822856');
+			} else if( varUA.indexOf('safari') > -1){
+					if(varUA.indexOf('opr') > -1) { 
+						// Opera
+						location.replace('https://play.google.com/store/apps/details?id=com.volvocars.vcksmart');
+					} else if(varUA.indexOf('chrome') > -1) { 
+						// Chrome
+						location.replace('https://play.google.com/store/apps/details?id=com.volvocars.vcksmart');
+					} else { 
+						// Safari
+						location.replace('https://apps.apple.com/kr/app/volvo-car-service/id1198822856');
+					}
+			} else {
+				//console.log('etc');
+				location.replace('https://play.google.com/store/apps/details?id=com.volvocars.vcksmart');
+			}
+			
+		});
+	</script>    
+
+<body>
+
+
+
+</body>
+</html>

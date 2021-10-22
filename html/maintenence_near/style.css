@@ -1,0 +1,58 @@
+/* .test { content: ""; float: none; display: flex; justify-content: baseline; align-items: baseline; position: absolute; top: 0; left: 0; margin: 0; padding: 0; width: 0; height: 0; font-size: 123; color: 00; font-weight: 0; border: 123; border-width: 00; background: 12312; transform: dasdasdf; overflow: hidden; transition:121 1; z-index: 3; } */
+
+.txt-con-wrap {width: 100%; box-sizing: border-box;}
+.txt-con-wrap .txt-tit {padding: 20px; font-size: 16px; font-weight: 600;}
+.txt-con-wrap #map {width: 100%; height: 350px;}
+
+.near-place-contents {padding: 20px; width: 100%; box-sizing: border-box;}
+.near-place-contents .np-tab {width: 100%; text-align: center; border-bottom: 2px solid #e3e3e3;}
+.near-place-contents .np-tab .np-btn-wrap {margin: 0 auto; max-width: 1024px;}
+.near-place-contents .np-btn-wrap::after {content: ""; display: block; clear: both;}
+.near-place-contents .np-btn-wrap .np-btn {float: left; position: relative; padding: 15px 30px; width: 33.333%;  font-size: 15px; font-weight: 500; color: #969696;}
+.near-place-contents .np-btn-wrap .np-btn::after {content: ""; display: none; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background-color: #308ad4;}
+.near-place-contents .np-btn-wrap .np-btn:active,
+.near-place-contents .np-btn-wrap .np-btn:focus,
+.near-place-contents .np-btn-wrap .np-btn:hover,
+.near-place-contents .np-btn-wrap .np-btn.active {color: #308ad4;}
+.near-place-contents .np-btn-wrap .np-btn:active::after,
+.near-place-contents .np-btn-wrap .np-btn:focus::after,
+.near-place-contents .np-btn-wrap .np-btn:hover::after,
+.near-place-contents .np-btn-wrap .np-btn.active::after {display: block;}
+.near-place-contents #n-place {padding: 30px 0; width: 100%; box-sizing: border-box;}
+.near-place-contents #n-place .np-con.item {padding: 15px; margin-bottom: 10px; border: 1px solid #e3e3e3; border-radius: 8px;}
+.near-place-contents #n-place .np-con.item .np-title {position: relative; margin: 0; padding-right: 10px; width: calc(100% - 130px); color: #6a6a6a; font-size: 15px; font-weight: 500; }
+.near-place-contents #n-place .np-con.item .np-title small {position: absolute; top: 0; right: -130px; font-size: 13px; font-weight: 300; padding: 0 25px;}
+.near-place-contents #n-place .np-con.item .np-title::after {content: ""; position: absolute; top: 5px; right: -130px; width: 12px; height: 8px; background: url(/images/maintenence_near/more-icon.png) no-repeat; background-position: 0 0;}
+.near-place-contents #n-place .np-con.item:active,
+.near-place-contents #n-place .np-con.item:focus,
+.near-place-contents #n-place .np-con.item:hover,
+.near-place-contents #n-place .np-con.item.active {border: 1px solid #308ad4;}
+.near-place-contents #n-place .np-con.item:active .np-title,
+.near-place-contents #n-place .np-con.item:focus .np-title,
+.near-place-contents #n-place .np-con.item:hover .np-title,
+.near-place-contents #n-place .np-con.item.active .np-title {color: #308ad4;} 
+.near-place-contents #n-place .np-con.item:active .np-title::after,
+.near-place-contents #n-place .np-con.item:focus .np-title::after,
+.near-place-contents #n-place .np-con.item:hover .np-title::after,
+.near-place-contents #n-place .np-con.item.active .np-title::after{background-position: -12px 0;}
+.near-place-contents #n-place .np-con.item .np-con-box {width: 100%;}
+.near-place-contents #n-place .np-con.item .np-con-box::after {content: ""; display: block; clear: both;}
+.near-place-contents #n-place .np-con.item .np-con-box strong {display: block; margin: 20px 0; font-size: 15px; font-weight: 500; color: #777777; line-height: 25px;}
+.near-place-contents #n-place .np-con.item .np-con-box strong em {display: block; font-size: 20px; font-weight: 500; color: #284e80;}
+.near-place-contents #n-place .np-con.item .np-con-box > img {float: left; display: block; width: 315px;}
+.near-place-contents #n-place .np-con.item .np-con-box > .txt-box {float: left; padding: 30px; width: calc(100% - 315px);}
+.near-place-contents #n-place .np-con.item .np-con-box > .txt-box p {margin: 0; padding: 0; font-size: 14px; font-weight: 500; color: #000000; line-height: 20px;}
+.near-place-contents #n-place .np-con.item .np-con-box > .txt-box .ico-list {margin-top: 10px;}
+.near-place-contents #n-place .np-con.item .np-con-box > .txt-box .ico-list li {position: relative; padding-left: 20px; font-size: 13px; padding-bottom: 10px; color: #a5a5a5; min-height:23px;}
+.near-place-contents #n-place .np-con.item .np-con-box > .txt-box .ico-list li > .np-ico {content: ""; position: absolute; top: -2px; left: 0; width: 15px; height: 17px; background: url(/images/maintenence_near/list-icon.png) no-repeat;}
+.near-place-contents #n-place .np-con.item .np-con-box > .txt-box .ico-list li > .np-ico.icon01 {background-position: 0 0;}
+.near-place-contents #n-place .np-con.item .np-con-box > .txt-box .ico-list li > .np-ico.icon02 {background-position: -15px 0;}
+.near-place-contents #n-place .np-con.item .np-con-box > .txt-box .ico-list li > .np-ico.icon03 {background-position: -30px 0;}
+@media(max-width: 767px){
+    .near-place-contents .np-btn-wrap .np-btn {padding: 15px;}
+    .near-place-contents #n-place .np-con.item .np-con-box > img {float: none;}
+    .near-place-contents #n-place .np-con.item .np-con-box > .txt-box {float: none; width: 100%; padding: 20px 0 0;}
+}
+@media(max-width: 450px){
+    .near-place-contents #n-place .np-con.item .np-con-box > img {width: 100%;}
+}

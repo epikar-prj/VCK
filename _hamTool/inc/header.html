@@ -1,0 +1,137 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "/inc/common.php";
+
+//관리자 체크
+AdminChk();
+
+//관리자 등급별 접근메뉴 체크
+require_once "admin_lvlchk.php";
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?=$SITE_INFO['charset']?>" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>VOLVO APP CMS</title>
+<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../css/ie8.css">
+<script src="../js/lib/html5shiv.js"></script>
+<script src="../js/lib/IE9.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../js/jquery/themes/base/jquery.ui.all.css">
+<link rel="stylesheet" href="../js/jquery/themes/Smoothness/jquery-ui.css">
+<link rel="stylesheet" href="../js/jquery/timepicker/jquery-ui-timepicker-addon.css">
+<style>
+	/* 달력 전체 폰트 크기 */
+	.ui-datepicker { font-size:12px; }
+	/* 토요일 */
+	.ui-datepicker-week-end { color : #0000ff; }
+	.Saturday a { color : #0000ff !important;}
+	/* 일요일 */
+	.ui-datepicker-week-end2 { color : #ff0000; }
+	.Sunday a { color:#ff0000 !important; }
+
+	/*.ui-datepicker { background:#ddebf7; border:1px solid #555; color:#333; font-size:12px; }
+	div.ui-datepicker-header { margin-top:5px; text-align:center; background:#ddebf7; border:0px; color:#708af8; font-size:14px; }*/
+	/*.ui-datepicker-week-end > a { color : #ff0000 !important;}*/
+	/*.ui-datepicker-week-end:first-child, .ui-datepicker-week-end:first-child a { color:#ff0000; }
+	.ui-datepicker-week-end:last-child, .ui-datepicker-week-end:last-child > a { color:blue; }*/
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="../js/function.min.js"></script>
+<script type="text/javascript" src="../js/jquery/ui/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery/timepicker/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<?
+# 설정된 Javascript 파일이 있을때 출력한다.
+
+if($JAVASCRIPT){
+	if(is_array($JAVASCRIPT)){
+		foreach($JAVASCRIPT as $tkey => $tval){
+			if(file_exists($tval)){
+				echo "<script type=\"text/javascript\" src=\"${tval}\"></script>\n";
+			}
+		}
+	} else {
+		if(file_exists($JAVASCRIPT)){
+			echo "<script type=\"text/javascript\" src=\"${JAVASCRIPT}\"></script>\n";
+		}
+	}
+}
+?>
+</head>
+<body>
+<div class="header-wrap">
+	<header class="header">
+		<h1 class="header-logo"><img src="../images/h1_sub-logo.png" height="85" align="center" alt="<?=$SITE_INFO['title']?>" class="logo-image" /></h1>
+
+		<!-- login/logout -->
+		<ul class="header-member">
+			<li class="header-member-item"><a href="<?=$SITE_INFO['http_host']?>/_hamTool/logout.php" class="header-member-link logout" title="로그아웃"><?=$_COOKIE['member_id']?>(<?=$_COOKIE['member_name']?>)</a></li>
+			<? if($_COOKIE['member_sid']){ ?>
+			<li class="header-member-item"><a href="<?=$SITE_INFO['http_host']?>/_hamTool/master/update.php?sid=<?=$_COOKIE['member_sid']?>" class="header-member-link modify" title="정보수정">정보수정</a></li>
+			<? } ?>
+		</ul>
+
+		<!-- out link -->
+		<ul class="header-outlink">
+			<li class="header-outlink-item"><a href="<?=$SITE_INFO['http_host']?>/" target="_blank" class="header-outlink-link site" title="사이트바로가기">사이트바로가기</a></li>
+		</ul>
+
+		<!-- global navigation -->
+		<nav class="header-gnb">
+			<ul class="header-gnb-list">
+                
+				<?
+                $mcnt = 0;
+				foreach($MENU_INFO['admin_key'] as $mkey => $mval){
+                    $admin_link = $MENU_INFO['admin_link'][$mval];
+					$li_class = ""; $a_class = "";
+					if( $mcnt == 0 ){ $a_class = " first"; }
+					if( ($admin_folder_key-1) == $mcnt ){ $li_class = " side"; $a_class = " on-left"; }
+					if( $admin_folder_key == $mkey ){ $a_class = " on"; }
+					if( ($admin_folder_key+1) == $mcnt ){ $li_class = " side"; $a_class = " on-right"; }
+				?>
+				<li class="header-gnb-item<?=$li_class?>"><a <?=($admin_link) ? "href=\"{$admin_link}\"" : ""?> class="header-gnb-link js-gnb<?=$a_class?>"><?=$MENU_INFO['admin'][$mval]?></a></li>
+				<?
+					$mcnt++;
+				}
+				?>
+			</ul>
+		</nav>
+	</header>
+</div>
+
+<div class="main-wrap">
+	<nav class="lnb">
+		<h2 class="lnb-title"><?=($admin_folder) ? $MENU_INFO['admin'][$admin_folder] : ""?></h2>
+		<? if( is_array($MENU_INFO['admin_sub'][$admin_folder]) ){ ?>
+		<ul class="lnb-list">
+			<? foreach($MENU_INFO['admin_sub'][$admin_folder] as $mskey => $msval){ ?>
+			<li class="lnb-list-item">
+				<a <?=($MENU_INFO['admin_sub_link'][$admin_folder][$mskey]) ? "href=\"{$MENU_INFO['admin_sub_link'][$admin_folder][$mskey]}\"" : ""?> class="lnb-list-link<?=($admin_sub_folder == $mskey) ? " on" : ""?>"><?=$msval?></a>
+			</li>
+			<? } ?>
+		</ul>
+		<? } ?>
+		<footer class="footer">
+			CopyRight &copy; 2017 <?=$SITE_INFO['title']?><br /> Co.,Ltd. All Rights Reserved.
+		</footer>
+	</nav>
+
+
+	<section class="main-section">
+		<div class="location">
+			<div class="location-item"><a href="<?=$SITE_INFO['http_host']?>/_hamTool/" class="location-link">Home</a></div>
+			<div class="location-item">></div>
+			<div class="location-item"><a <?=($MENU_INFO['admin_link'][$admin_folder]) ? "href=\"{$MENU_INFO['admin_link'][$admin_folder]}\"" : ""?> class="location-link"><?=($admin_folder) ? $MENU_INFO['admin'][$admin_folder] : ""?></a></div>
+			<div class="location-item">></div>
+			<div class="location-item"><a <?=($MENU_INFO['admin_sub_link'][$admin_folder][$admin_sub_folder]) ? "href=\"{$MENU_INFO['admin_sub_link'][$admin_folder][$admin_sub_folder]}\"" : ""?> class="current"><?=($admin_folder && $admin_sub_folder) ? $MENU_INFO['admin_sub'][$admin_folder][$admin_sub_folder] : ""?></a></div>
+		</div>
+
+		<h3 class="section-title"><?=($admin_folder && $admin_sub_folder) ? $MENU_INFO['admin_sub'][$admin_folder][$admin_sub_folder] : ""?></h3>

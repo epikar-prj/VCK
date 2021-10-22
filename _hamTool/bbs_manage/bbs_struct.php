@@ -1,0 +1,46 @@
+<?php
+$create_query[] = "DROP TABLE IF EXISTS " . $Tname . "bbs_::MASTER::";
+$create_query[] = "
+CREATE TABLE " . $Tname . "bbs_::MASTER:: (
+	`sid`									int(11) unsigned				NOT NULL			auto_increment						,
+	`bm_sid`								int(11) unsigned										default '0'								,
+	`grp`									int(11) unsigned										default '0'								,
+	`par`									int(11) unsigned										default '0'								,
+	`dth`									int(11) unsigned										default '0'								,
+	`odr`									int(11) unsigned										default '0'								,
+	`category`							varchar(255)											default ''								,
+	`lang`								varchar(10)											default ''								,
+	`issuedate`							varchar(10)											default ''								,
+	`sdate`								varchar(10)											default ''								,
+	`edate`								varchar(10)											default ''								,
+	`member_sid`						int(11) unsigned										default '0'								,
+	`id`									varchar(20)											default ''								,
+	`pw`									varchar(64)											default ''								,
+	`name`								varchar(50)											default ''								,
+	`nick`									varchar(50)											default ''								,
+	`title`									varchar(255)											default ''								,
+	`ishtml`								enum('Y','N')											default 'N'								,
+	`summary`							text																									,
+	`content`							text																									,
+	`content2`							text																									,
+	`url`									varchar(255)											default ''								,
+	`hp`									varchar(255)											default ''								,
+	`email`								varchar(255)											default ''								,
+	`company`							varchar(255)											default ''								,
+	`thum_file`							varchar(255)											default ''								,
+	`ip`									varchar(20)											default ''								,
+	`viewcnt`							int(11) unsigned										default '0'								,
+	`notice`								enum('N','Y')											default 'N'								,
+	`isclose`							enum('N','Y')											default 'N'								,
+	`ismain`								enum('N','Y')											default 'N'								,
+	`islist`								enum('N','Y')											default 'N'								,
+	`status`								enum('N','Y')											default 'N'								,
+	`chkdel`								enum('N','Y')											default 'N'								,
+	`regdate`							datetime													default '1900-01-01 00:00:00'		,
+	`reg_id`								varchar(20)											default ''								,
+	`uptdate`							datetime													default '1900-01-01 00:00:00'		,
+	`upt_id`								varchar(20)											default ''								,
+	PRIMARY KEY (sid)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1
+";
+?>

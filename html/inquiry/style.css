@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* 공통 */
+.btn_group {display: flex;}
+.btn { transition: 0.2s; display: flex; flex: 1; justify-content: center; align-items: center; font-size: 16px; font-weight: 500; color: #252f62; border: 1px solid #252f62; border-radius: 5px; height: 45px; }
+.btn + .btn {margin-left: 5px;}
+.btn:active { background-color: rgba(0, 0, 0, .05); }
+.bg_color1 {background: #252f62;}
+.bg_color1 {color: #fff;}
+.btn.bg_color1:active {background-color: rgba(37, 47, 98, 0.8);}
+
+/*header {display:none;}*/
+
+
+.container {padding-top:10px;}
+
+.cont_ti_wrap {width:100%; text-align:center; border-bottom: solid 1px #e3e3e3; padding-bottom:20px; }
+.cont_ti_wrap .cont_ti {font-size:18px; color:#141414; font-family:"NotoSansCJK", sans-serif; letter-spacing:-.8px; font-weight:400; margin-bottom:15px;}
+.cont_ti_wrap .cont_txt {font-size:15px; color:#707070; font-family:"NotoSansCJK", sans-serif; line-height:1.5; letter-spacing:-.8px; font-weight:200; word-break:keep-all;}
+
+.input_warp {padding-top:20px;}
+.input_warp .input_select {width:100%; height:45px;  border:solid 1px #e3e3e3; border-radius:5px; margin-bottom:10px; background-color:#eeeeee; background-image:url(/images/inquiry/select_bul.png); background-repeat:no-repeat; background-position: center right 15px;   }
+.input_warp .input_select select {width:100%; line-height:43px; padding:0 15px; font-weight:400; font-size:15px;}
+.input_warp .input_ti {width:100%; height:45px; border:solid 1px #e3e3e3; border-radius:5px; margin-bottom:10px; margin-bottom:10px;  }
+.input_warp .input_ti input { width:100%; line-height:43px; font-size:15px; color:#141414; font-weight:300; padding:0 15px; }
+.input_warp .input_ti input::placeholder {color:#707070;}
+
+.input_warp .input_txt {width:100%; border:solid 1px #e3e3e3; border-radius:5px; margin-bottom:10px; margin-bottom:20px;  }
+.input_warp .input_txt textarea { width:100%; height:170px;  line-height:1.4; font-size:15px; color:#141414; font-weight:300; padding:15px; resize:none;}
+.input_warp .input_txt textarea::placeholder {color:#707070;}
+
+.info_wrap {width:100%;}
+.info_wrap .info_ti {font-size:14px; color:#141414; font-weight:400; margin-bottom:15px; padding-left:3px;}
+.info_wrap .info_input {width:100%; height:45px; border:solid 1px #e3e3e3; border-radius:5px; margin-bottom:10px; margin-bottom:35px;  }
+.info_wrap .info_input input { width:100%; line-height:43px; font-size:15px; color:#141414; font-weight:300; padding:0 15px; }
+.info_wrap .info_input input::placeholder {color:#b9b9b9;}
+
+.info_wrap .info_type {margin-bottom:20px; padding-left:3px; font-size:15px; }
+.info_wrap .info_type input[type="radio"] {display:none;}
+.info_wrap .info_type input[type="radio"] + label span {display:inline-block; width:15px; height:15px; border:solid 1px #c7c7c7; border-radius:50%; vertical-align:bottom; margin-right:8px; cursor:pointer;}
+.info_wrap .info_type input[type="radio"] + label.email_load { margin-right:30px; }
+
+.info_wrap .info_type input[type="radio"]:checked + label span {border:solid 4px #1868b9;}
+.info_wrap .info_type input[type="radio"]:checked + label {color:#1868b9; font-weight:400;}
+
+.btn_link {width:100%; max-width:335px; height:45px;  margin:0 auto 30px; border:solid 1px #284e80; border-radius:5px; }
+.btn_link button {display:block; width:100%; height:100%; line-height:43px; text-align:center; color:#284e80; font-weight:500; position:relative; }
+
+
+/*.inquiry_history .list { margin: 0 -20px; }
+.inquiry_history .list ul li { border-bottom: 1px solid #e3e3e3; }
+.inquiry_history .list ul li a { display: block; position: relative; padding: 23px 20px 23px; background-color: #fff; }
+.inquiry_history .list ul li a.re { padding-left: 50px; background-color: #f6f6f6; }
+.inquiry_history .list ul li a.re:before { content: "RE"; display: block; position: absolute; top: 23px; left: 20px; padding: 3px 5px; border-radius: 2px; background-color: #141414; font-size: 12px; color: #fff; font-weight: 500; letter-spacing: -.8px; line-height: 100%; }
+.inquiry_history .list ul li a span { font-size: 13px; color: #707070; letter-spacing: -.8px; }
+.inquiry_history .list ul li a p { margin-top: 8px; font-size: 15px; color: #141414; font-weight:300; letter-spacing: -.8px; }*/
+
+.cont_list_wrap {width:100%; }
+ul.cont_list {width:100%; margin-bottom:20px;}
+ul.cont_list:after {clear:both; display:block; content:"";}
+ul.cont_list li {width:100%; border-bottom:solid 1px #e3e3e3; padding:0 0 10px 10px; }
+ul.cont_list li .list_ti {position:relative; width:100%; padding:24px 30px 10px 0; word-break:keep-all; letter-spacing:-.8px; line-height:1.4; font-size:15px; color:#141414; font-weight:300;  }
+ul.cont_list li .list_ti span.type { font-size: 13px; color: #707070; letter-spacing: -.8px; display:block; padding-bottom:5px;}
+ul.cont_list li .list_ti:after {display:block; content:""; position:absolute; top:38px; right:5px; width:18px; height:10px; background-image:url(/images/common/select_arr.png) ; background-repeat:no-repeat; background-size:100%; }
+ul.cont_list li.ov .list_ti:after {background-image:url(/images/common/select_arr_active.png); }
+
+ul.cont_list li .list_txt { display:none; font-size:14px; font-weight:300; color:#707070; letter-spacing:-.8px; line-height:1.6; word-break:break-all; padding-bottom:20px; padding-top:10px; }
+ul.cont_list li .list_txt span.email {font-size:14px; color:#707070; display:block; padding-bottom:3px;}
+ul.cont_list li .list_txt p, ul.cont_list li .list_txt span { line-height:1.6; }
+ul.cont_list li.ov .list_txt {display:block;}
+
+ul.cont_list li.empty {padding:24px 10px; word-break:keep-all; letter-spacing:-.8px; line-height:1.4; text-align:center; font-size:15px; color:#141414; font-weight:300;}
+
+
+/* 탭 */
+#contents .tabs { margin: 0 0 40px; }
+#contents.inquiry_history .tabs { margin: 0 0 10px; }
+#contents .tabs ul { display: flex;  }
+#contents .tabs ul li { display: flex; width: 50%; height: 45px; border-bottom: 1px solid #e3e3e3 }
+#contents .tabs ul li.on {  border-bottom: 2px solid #1868b9; }
+#contents .tabs ul li a { display: flex; justify-content: center; align-items: center; flex: 1; font-size: 16px; color: #707070; font-weight: 400; letter-spacing: -.8px; }
+#contents .tabs ul li.on a { color: #141414; font-weight:500; }

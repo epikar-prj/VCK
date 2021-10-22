@@ -1,0 +1,124 @@
+
+.txt-con-wrap {width: 100%; padding: 25px 20px; box-sizing: border-box;}
+.txt-con-wrap.record2 {padding: 0 20px 25px;}
+/*** record1 ***/
+/* 자동차 번호 */
+.car-num-navigation {width: 100%; box-sizing: border-box; text-align: center;}
+.car-num-navigation .car-num {position: relative; font-size: 20px; color: #000000; letter-spacing: -1px; font-weight: 400;}
+.car-num-navigation .car-num::before {content: ""; position: absolute; left: -25px; top: 3px; width: 20px; height: 20px; background: url(/images/maintenence_record/num_left.png) no-repeat center;}
+.car-num-navigation .car-num::after {content: ""; position: absolute; right: -25px; top: 3px; width: 20px; height: 20px; background: url(/images/maintenence_record/num_right.png) no-repeat center;}
+.txt-con-wrap.record3 .car-num-navigation .car-num::before {display: none;}
+.txt-con-wrap.record3 .car-num-navigation .car-num::after {display: none;}
+/* 조회 시작일 & 완료일 */
+.calendar-btn-box {width: 100%; margin-top: 30px;}
+.calendar-btn-box::after {content: ""; display: block; clear: both;}
+.calendar-btn-box .cal-btn {float: left; position: relative; padding-left: 60px; width: calc((100% - 5px) / 2); height: 45px; border: solid 1px #e3e3e3; border-radius: 4px; background-color: #f8f8f8; font-size: 15px; font-weight: 500; color: #969696; line-height: 45px;}
+.calendar-btn-box .cal-btn::before {content: ""; position: absolute; top: 11px; left: 30px; width: 22px; height: 22px; background: url(/images/maintenence_record/calendar_icon.png) no-repeat; background-position: 0 0;}
+.calendar-btn-box .cal-btn.start {margin-right: 5px;}
+.calendar-btn-box .cal-btn:hover,
+.calendar-btn-box .cal-btn:focus,
+.calendar-btn-box .cal-btn:active,
+.calendar-btn-box .cal-btn.active {background-color: #ffffff; color: #308ad4; border: 1px solid #308ad4;}
+.calendar-btn-box .cal-btn:hover::before,
+.calendar-btn-box .cal-btn:focus::before,
+.calendar-btn-box .cal-btn:active::before,
+.calendar-btn-box .cal-btn.active::before {background-position: -22px 0;}
+@media(max-width: 450px){
+    .calendar-btn-box .cal-btn {padding-left: 45px;}
+    .calendar-btn-box .cal-btn::before {left: 15px;}
+}
+@media(max-width: 350px){
+    .calendar-btn-box .cal-btn {float: none; width: 100%; padding-left: 60px;}
+    .calendar-btn-box .cal-btn::before {left: 30px;}
+    .calendar-btn-box .cal-btn.start {margin-right: 0; margin-bottom: 5px;}
+}
+/* 달력 */
+.container{overflow: hidden;}
+.prev,
+.next {transition:0.2s; vertical-align: middle; display: inline-block; padding: 10px; width: 33px; height: 33px;}
+.prev:active,
+.next:active{border-radius: 10px; background-color: rgba(0, 0, 0, .05);}
+.prev i,
+.next i {display: block; width: 13px; height: 13px;}
+.prev i{background:url(/images/maintenence_record/calendar_leftArrow.png) no-repeat center / auto 13px;}
+.next i{ background:url(/images/maintenence_record/calendar_rightArrow.png) no-repeat center / auto 13px;}
+.cur_month{margin-top: -3px; vertical-align: middle; display: inline-block;}
+.cur_month span {font-size: 30px; letter-spacing: -0.1em; font-weight: 200;}
+.calendar {margin-top: 30px; width:100%; text-align:center;}
+#calendar {margin-bottom: 10px; animation-name: show_right; animation-duration: 0.2s;}
+.calendar caption {text-align: center; font-size:30px; font-weight:200; margin-bottom: 20px;}
+.calendar thead{position: relative;}
+.calendar thead tr {position: relative;}
+.calendar thead tr:after {content:''; position:absolute; bottom: 10px; left: -10vw; height: 20px; border: 5px solid white; width: 120vw; box-shadow: 1px 3px 5px rgba(0,0,0,0.05);}
+.calendar tr {display: flex;}
+.calendar th {display: flex; justify-content: center; align-items: center; flex: 1; text-align: center; font-weight: 400; font-size: 13px; vertical-align: middle; color: #c1c1c1; padding-bottom: 30px;}
+.calendar td {display: flex; justify-content: center; align-items: center; flex: 1; height: 50px; vertical-align: middle; color: #c1c1c1;}
+.calendar td a {transition: background 0.2s, border-color 0.2s; letter-spacing: -0.8px; display: flex; width: 35px; height: 35px; font-weight: 400; font-size: 16px; justify-content: center; align-items: center; color: #000;}
+.calendar td a.on {border: 2px solid #1c6bba; border-radius: 10px; color: #1c6bba;}
+.calendar td a:hover,
+.calendar td a:focus,
+.calendar td a:active,
+.calendar td a.active {border: 2px solid #1c6bba; border-radius: 10px; color: #1c6bba;}
+.calendar td a:active{background-color: rgba(0, 0, 0, .05);}
+.cal-btn-box .btn {letter-spacing: -0.8px; transition: 0.2s; display: flex; flex: 1; justify-content: center; align-items: center; font-size: 16px; font-weight: 400; color: #284e80; border: 1px solid #284e80; border-radius: 5px; height: 45px;}
+
+
+/*** record2 ***/
+/* List */
+#contents ul.select {width:100%; padding-top:15px; margin-bottom:24px;}
+#contents ul.select:after {display:block; clear:both; content:"";}
+#contents ul.select li {float:left; width:calc((100% - 5px) / 2); height:45px; border:solid 1px #e3e3e3; border-radius:4px; background-color:#f8f8f8; background-image:url(/images/reservation_list/select_bul.png); background-repeat:no-repeat; background-position:right 10px center; background-size:8px 6px;  }
+#contents ul.select li select {line-height:43px; padding-left:40px; width:100%; height:100%; font-size:16px; color:#141414; background-repeat:no-repeat; background-position:left 10px center; }
+#contents ul.select li.date {margin-right:5px; }
+#contents ul.select li.date select {background-image:url(/images/reservation_list/ico_date.png); background-size:16px 16px;}
+#contents ul.select li.model select {background-image:url(/images/reservation_list/ico_model.png); background-size:20px 14px;}
+
+/* 기간 박스 */
+.term-btn-box {width: 100%; margin-top: 30px;}
+.term-btn-box .term-btn {width: 100%; height: 45px; border: solid 1px #e3e3e3; border-radius: 4px; background-color: #f8f8f8; text-align: center;}
+.term-btn-box .term-btn span {position: relative; font-size: 17px; font-weight: 400; line-height: 45px; color: #969696;}
+.term-btn-box .term-btn span::before {content: ""; position: absolute; top: 0; left: -30px; width: 22px; height: 22px; background: url(/images/maintenence_record/calendar_icon.png) no-repeat; background-position: 0 0;}
+@media(max-width: 450px){
+    .term-btn-box .term-btn span {font-size: 16px;}
+}
+
+/* 정비완료날짜 & 서비스센터 박스 */
+.data-box-wrap {width: 100%; box-sizing: border-box;}
+.data-box-wrap .data-box {position: relative; width: 100%; margin-bottom: 10px; padding: 20px; border: 1px solid #e3e3e3; border-radius: 5px;}
+.data-box-wrap .data-box::after {content: ""; position: absolute; top: 50%; right: 20px; width: 8px; height: 11px; background: url(/images/maintenence_record/dm-icon.png) no-repeat center; background-position: 0 0; transform: translatey(-50%);}
+.data-box-wrap .data-box > a {width: 100%; display: block;}
+.data-box-wrap .data-box .list-data {padding-right: 20px;}
+.data-box-wrap .data-box .list-data li {position: relative; padding-left: 80px; padding-bottom: 10px; font-size: 15px; color: #888888; font-weight: 400; line-height: 1.3; letter-spacing: -0.5px;}
+.data-box-wrap .data-box .list-data li:last-child {padding-bottom: 0;}
+.data-box-wrap .data-box .list-data li b {position: absolute; width: 80px; top: 0; left: 0;}
+.data-box-wrap .data-box:hover,
+.data-box-wrap .data-box:focus,
+.data-box-wrap .data-box:active,
+.data-box-wrap .data-box.active {border: 1px solid #252f62; transition: all 0.2s;}
+.data-box-wrap .data-box:hover::after,
+.data-box-wrap .data-box:focus::after,
+.data-box-wrap .data-box:active::after,
+.data-box-wrap .data-box.active::after {background-position: -8px 0;}
+.data-box-wrap .data-box:hover .list-data li,
+.data-box-wrap .data-box:focus .list-data li,
+.data-box-wrap .data-box:active .list-data li,
+.data-box-wrap .data-box.active .list-data li {color: #252f62; transition: all 0.2s;}
+
+/*** record3 ***/
+.data-detail-wrap {width: 100%; margin-top: 20px;}
+.data-detail-wrap .data-detail {width: 100%; padding: 20px 0; border-top: 1px solid #e3e3e3;}
+.data-detail-wrap .data-detail .db-list {}
+.data-detail-wrap .data-detail .db-list li {font-size: 15px; color: #000000; font-weight: 500; line-height: 1.3; letter-spacing: -0.5px;}
+.data-detail-wrap .data-detail .db-list > li {position: relative; padding-left: 85px; padding-bottom: 15px;}
+.data-detail-wrap .data-detail .db-list > li ul li {padding-bottom: 5px;}
+.data-detail-wrap .data-detail .db-list > li ul li:last-child {padding-bottom: 0;}
+.data-detail-wrap .data-detail .db-list > li span {font-weight: 500;}
+.data-detail-wrap .data-detail .db-list > li b {position: absolute; width: 85px; top: 0; left: 0; color: #252f62; padding-left: 5px;}
+.data-detail-wrap .data-detail.personal {position: relative; padding-right: 80px;}
+.data-detail-wrap .data-detail.personal .img {position: absolute; width: 100px; top: 0; right: -70px; border:solid 1px #ececec;}
+.data-detail-wrap .data-detail.personal .img img {width: 100%; display: block;}
+@media(max-width: 767px){
+    .data-detail-wrap .data-detail.personal .img {width: 85px;}
+}
+.db-list-btn-box {margin-top: 100px;}
+.db-list-btn-box .btn {letter-spacing: -0.8px; transition: 0.2s; display: flex; flex: 1; justify-content: center; align-items: center; font-size: 16px; font-weight: 500; color: #284e80; border: 1px solid #284e80; border-radius: 5px; height: 45px;}

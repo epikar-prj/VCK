@@ -1,0 +1,424 @@
+@charset "UTF-8";
+
+/* 공통 */
+.mv20 { margin: 20px 0; }
+.mt10 { margin-top: 10px; }
+.mt20 { margin-top: 20px; }
+.mt30 { margin-top: 30px; }
+.mb10 { margin-bottom: 10px; }
+.mb20 { margin-bottom: 20px; }
+.btn_group { display: flex; }
+.btn {letter-spacing: -.8px;transition: 0.2s;display: flex;flex: 1;justify-content: center;align-items: center;font-size: 16px;font-weight: 400;color: #1868b9;border: 1px solid #1868b9;border-radius: 5px;height: 45px;}
+.btn + .btn { margin-left: 5px; }
+.btn:active { background-color: rgba(0, 0, 0, .05); }
+.bg_color1 {background: #284e80;color: #fff;}
+.btn.bg_color1:active {background-color: #213f66;}
+
+.newslist .container {padding:0 10px;}
+
+
+
+/* 입력양식 */
+.applicant { padding-top: 10px; margin-bottom: 20px; border-top: 1px solid #ccc; }
+.input_box {overflow: hidden; font-size: 14px; border: 1px solid #e3e3e3; border-radius: 5px; }
+.input_box input[type=text] {letter-spacing: -.8px; line-height: 40px; height: 40px; width: 100%; padding: 0 15px; font-weight: 300; }
+.input_box input[type=number] {letter-spacing: -.8px; line-height: 40px; height: 40px; width: 100%; padding: 0 15px; font-weight: 300; }
+.input_box input[type=text]:active {background-color: rgba(0, 0, 0, .05); }
+.input_box select {letter-spacing: -.8px; height: 40px; font-size: 14px; border: 0; width: 100%; padding: 0 20px; font-weight: 300; background-image: url(/images/common/select_tri.png); background-repeat: no-repeat; background-size: 8px 6px; background-position: right 15px top 16px; }
+.input_box select:active {background-color: rgba(0, 0, 0, .05); }
+.input_box.gray.gray {border: 0; }
+.input_box.gray select { background-color: #eeeeee; }
+.input_wrap { display: flex; }
+.input_wrap .input_box { flex: 1; position: relative; }
+
+.phone_wrap .input_box {border-radius: 0; border-left: 0; border-right: 0; }
+.phone_wrap .input_box:first-child {border-radius: 5px 0 0 5px; border-left: 1px solid #e3e3e3; }
+.phone_wrap .input_box:last-child {border-radius: 0 5px 5px 0; border-right: 1px solid #e3e3e3; }
+.phone_wrap .input_box + .input_box:before {position: absolute; top: 11px; left: 0; content: ''; display: block; width: 1px; height: 20px; background: #e3e3e3; }
+
+.date_wrap .input_box {border-radius: 0; border-left: 0; border-right: 0; }
+.date_wrap .input_box:first-child {border-radius: 5px 0 0 5px; border-left: 1px solid #e3e3e3; }
+.date_wrap .input_box:last-child {border-radius: 0 5px 5px 0; border-right: 1px solid #e3e3e3; }
+.date_wrap .input_box + .input_box:before {position: absolute; top: 11px; left: 0; content: ''; display: block; width: 1px; height: 20px; background: #e3e3e3; }
+
+.choise_wrap { display: flex; }
+.choise_wrap input[type="radio"],
+.choise_wrap input[type="checkbox"] { display: none; }
+.choise_wrap input + span {transition: 0.2s; height: 40px; font-size: 14px; border: 1px solid #e3e3e3; border-radius: 5px; color: #b9b9b9; font-weight: 300; flex: 1; display: flex; justify-content: center; align-items: center; letter-spacing: -.8px; }
+.choise_wrap input:checked + span {border-color: #1868b9;color: #1868b9;font-weight: 400;display: flex;justify-content: center;align-items: center;letter-spacing: -.8px;}
+.choise_wrap label {margin-right: 5px; flex: 1; display: flex; }
+.choise_wrap label:last-child {margin-right: 0; }
+.choise_wrap input:active + span {background-color: rgba(0, 0, 0, .05); }
+
+.input_wrap.address_wrap { flex-direction: column; }
+.input_wrap.address_wrap .input_box {margin-top: 5px; }
+.input_wrap.address_wrap .first { display: flex; }
+.input_wrap.address_wrap .first .input_box { margin-top: 0; }
+.input_wrap.address_wrap .first .btn {height: 40px; width: 100px; margin-left: 5px; flex: none; font-weight: 400; font-size: 14px; }
+
+.input_wrap.with_wrap { flex-wrap : wrap; }
+.input_wrap.with_wrap .with_name, 
+.input_wrap.with_wrap .with_birth { flex: 1; min-width: 100px; }
+.input_wrap.with_wrap .with_sex,
+.input_wrap.with_wrap .with_rel { flex: none; margin-left: 5px; min-width: 100px; }
+
+
+.input_tit {letter-spacing: -.8px; font-size: 14px; font-weight: 500; margin-left: 10px; margin-top: 20px; margin-bottom: 10px; display: block; }
+.applicant .descript { color: #a0a0a0; font-size: 13px; letter-spacing: -.8px; margin-top: 10px; font-weight: 300; }
+
+#with .input_box { margin-bottom: 5px; }
+
+/* 중간 메뉴 */
+
+.child_menu {display: flex; padding:0 10px; margin-bottom:20px; }
+.child_menu li {display: flex; width: 50%; height: 45px; border-bottom: 1px solid #e3e3e3 }
+.child_menu li a {display: flex; justify-content: center; align-items: center; flex: 1; font-size: 16px; color: #a8a8a8; font-weight: 400; letter-spacing: -.8px;}
+.child_menu li a.on {border-bottom: 2px solid #1868b9; color:#141414; font-weight:500;}
+
+
+/* 프로모션 리스트 */
+.list .item { border-radius: 5px; transition: 0.2s; }
+.list .item .banner {overflow: hidden; position: relative; height: 45vw; border-radius: 5px; }
+.list .item .banner .text_wrap {background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%); height: 100%; padding: 18px; display: flex; }
+.list .item .banner .text_wrap .date {height: 40px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); width: 122px; display: flex; margin-top: -5px; }
+.list .item .banner .text_wrap .date strong { font-size: 30px; color: #fff; margin-right: 10px; }
+.list .item .banner .text_wrap .date span { margin-top: 10px; font-size: 16px; color: rgba(255, 255, 255, 0.5); }
+.list .item .banner .text_wrap .text {letter-spacing: -.8px; font-weight: 300; color: #fff; line-height: 1.3; font-size: 16px; margin-left: 15px; }
+.list .item.empty .banner .text_wrap { display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, .5); }
+.list .item.empty .banner .text_wrap p { letter-spacing: -.8px; font-weight: 300; color: #fff; line-height: 1.5; font-size: 16px; text-align: center; }
+.list .item + .item { margin-top: 10px; border-right: 5px; }
+.list .item.on { transition: 0.2s; box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1); }
+.list .item .cont_wrap { transition: 0.2s; overflow: hidden; height: 0; }
+.list .item .cont { padding: 15px; }
+.list .item .cont h6 {font-size: 16px; font-weight: 300; color:#141414; letter-spacing: -.8px; word-break: keep-all; line-height: 1.5; }
+.list .item .cont .text {padding: 10px 0; font-size: 14px; color:#141414; font-weight: 400; letter-spacing: -.8px; line-height: 1.5; word-break: keep-all; }
+.list .item .cont .gift {border-top: 1px solid #e3e3e3; font-size: 0; vertical-align: top; padding-top: 10px; margin-bottom: 15px; }
+.list .item .cont .gift li {width: 100%; display: inline-block; vertical-align: top; font-size: 14px; font-weight: 400; letter-spacing: -.8px; color: #707070; line-height: 1.5; }
+.list .item .cont .gift li:nth-child(1) { margin-top: 0; }
+.list .item .cont .btn { height: 40px; }
+.list .item:nth-child(1) .banner {background: url(/images/promotion/thumb_bg1.jpg) no-repeat center / cover; }
+.list .item:nth-child(2) .banner { background: url(/images/promotion/thumb_bg2.jpg) no-repeat center / cover; }
+.list .item:nth-child(3) .banner { background: url(/images/promotion/thumb_bg3.jpg) no-repeat center / cover; }
+
+/* 개인정보 수집 및 이용동의 */
+.agree_wrap { margin-top: 20px; background:#f6f6f6;margin: 0 -20px;padding: 0 20px;padding-bottom: 20px;}
+.agree_wrap .descript {font-size: 14px; font-weight: 300; letter-spacing: -.8px; padding: 15px 0; border-bottom: 1px solid #e3e3e3; line-height: 1.5; }
+.agree_wrap .descript small { margin-top: 6px; font-size: 11px;color: #9c9c9c;font-weight: 400;display: block;letter-spacing: -.8px; word-break: keep-all;}
+.agree {display:flex;flex-direction:column; padding-bottom: 20px; }
+.agree label {display:flex;align-items:center;}
+.agree label + label {margin-top:10px;}
+.agree label.top_label{border-bottom:1px solid #e3e3e3;padding-bottom:10px;padding-top: 20px;}
+.agree label.top_label span {font-size:13px;font-weight:300;}
+.agree label span {font-size:14px;font-weight:400;letter-spacing:-.8px;flex:1;line-height: 1.5;margin-right: 10px;word-break: keep-all;color: #777777;}
+.agree label span small {font-size: 11px;color: #9c9c9c;font-weight: 400;display: block;letter-spacing: -.8px;}
+.agree label input[type=checkbox]{transition:0.2s;width:25px;height:25px;border:1px solid #e3e3e3;background:url(/images/common/check.png) no-repeat center / 11px auto; background-color: #fff; }
+.agree label input[type=checkbox]:checked{background-color:#284e80;}
+.agree .box-agree { margin-top: 10px; }
+.agree .box-agree a { margin-top: 5px; font-size: 13px; color: #284e80; font-weight: 400; letter-spacing: -.8px; }
+.agree_wrap .box-caption { padding-top: 20px; border-top: 1px solid #e3e3e3; }
+.agree_wrap .box-caption strong { font-size: 14px; font-weight: 300; letter-spacing: -.8px; line-height: 1.5; }
+.agree_wrap .box-caption ul { margin-top: 5px; }
+.agree_wrap .box-caption ul li { position: relative; padding-left: 10px; margin-bottom: 5px; font-size: 14px; font-weight: 400; letter-spacing: -.8px; flex: 1; line-height: 1.5; margin-right: 10px; word-break: keep-all; color: #777777; }
+.agree_wrap .box-caption ul li:before { position: absolute; top: 9px; left: 0; width: 3px; height: 3px; background-color: #ccc; display: block; content: ""; }
+
+.agree_pop {/* display: flex; flex-direction: column;*/ position: absolute; top: 100vh; left: 0; width: 100%; height: 100%; background-color: #fff; z-index: 1; }
+.agree_pop .top { position: relative; display: flex; height: 59px; align-items: center;padding: 0px 5px;height: 59px; }
+.agree_pop .top .back { flex: none; }
+.agree_pop .top .back a {display: flex;padding: 12px;width: 40px;height: 40px;border-radius: 10px;transition: 0.2s;justify-content: center;align-items: center;}
+.agree_pop .top .back a:active { background-color: rgba(0, 0, 0, .05); }
+.agree_pop .top .back a img { width: 16px; }
+.agree_pop .top h4 {flex: none;font-size: 20px;color: #000;font-weight: 200;letter-spacing: -.4px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);min-width: 220px;text-align: center;}
+.agree_pop .middle { flex-grow: 1; padding: 0 20px; }
+.agree_pop .middle h5 { display: block; margin-bottom: 10px; padding-bottom: 15px; font-size: 17px; color: #000000; padding-top:15px; font-weight: 400; border-bottom: 1px solid #e3e3e3; letter-spacing: -.8px; }
+.agree_pop .middle p { font-size: 14px; color: #a7a7a7; letter-spacing: -.8px; line-height: 20px; }
+.agree_pop .middle strong { margin-bottom: 8px; margin-top:20px; display: block; font-size: 14px; color: #000000; letter-spacing: -.8px; }
+.agree_pop .bottom { height: 75px; }
+.btn_pop_close_wrap { left:0px; width:100%; padding:0 20px; background:#fff; box-shadow:0px -10px 15px 15px white; z-index:3;}
+.btn_pop_close {width:100%; max-width:335px; height:45px;  margin:0 auto 30px; border:solid 1px #284e80; border-radius:4px; }
+.btn_pop_close a {display:block; width:100%; height:100%; line-height:43px; text-align:center; color:#284e80; font-weight:500; position:relative; }
+
+.group_time  { display: none; }
+.group_widthCount  { display: none; }
+
+
+section#visual { width:100%; }
+section#visual .visual_cont {width:100%; height:100%; max-width:1500px; margin:0 auto; position:relative;}
+section#visual .visual_cont .box-img { height: calc(100vw * .6); overflow: hidden; }
+section#visual .visual_cont .box-img img {  transform: scale(1.3) ; }
+section#visual .visual_cont .box-img video { height: 100%; }
+section#visual .visual_cont .visual_cont_inner { width: 100%; background:#161618; min-height:200px; padding:30px;}
+section#visual .visual_cont .visual_cont_inner .visual_logo { margin: 0 auto 25px; width: 180px; }
+section#visual .visual_cont .visual_cont_inner .visual_logo img {width:100%;}
+section#visual .visual_cont .visual_cont_inner .text {font-size: 15px; font-weight:200; color:#fff; line-height: 1.4; margin-bottom: 10px; text-align: center; letter-spacing: -.5px; word-break: keep-all;}
+section#visual .visual_cont .visual_cont_inner .text:last-child {margin-bottom:0;}
+
+#step_02 { margin-top: 75px; }
+
+section.testdrive_info .testdrive_info_inner { margin-bottom: 60px; text-align: center; }
+.testdrive_info_inner .event_wrap .sti { margin-bottom: 8px; font-size: 20px; color: #003057; font-weight: 400; }
+.testdrive_info_inner .event_wrap .ti { margin-bottom: 20px; font-size: 28px; font-weight: 400; }
+.testdrive_info_inner .event_date { margin-bottom: 30px; }
+.testdrive_info_inner .event_date .event_date_ti { margin-bottom: 20px; padding-top: 29px; font-size: 20px; font-weight: 300; }
+.testdrive_info_inner .event_date ul.event_date_list { border-top: solid 1px #ccc; border-bottom: solid 1px #ccc; }
+.testdrive_info_inner .event_date ul.event_date_list li { padding: 20px 15px; min-height: 70px; border-bottom: solid 1px #eeeeee; letter-spacing: -.5px; }
+.testdrive_info_inner .event_date ul.event_date_list li:last-child { border-bottom: none; }
+.testdrive_info_inner .event_date ul.event_date_list li .list_ti { display: block; font-size: 17px; color: #333; font-weight: 400; line-height: 1.4; }
+.testdrive_info_inner .event_date ul.event_date_list li .list_loc { margin-bottom: 12px; padding-top: 5px; font-size: 15px; color: #666; font-weight: 200; line-height: 1.4; }
+.testdrive_info_inner .event_date ul.event_date_list li .list_txt { font-size: 17px; color: #333; font-weight: 300; line-height: 1.4; }
+.testdrive_info_inner .event_info .event_info_ti { margin-bottom: 20px; padding-top: 29px; font-size: 20px; font-weight: 300; }
+.testdrive_info_inner .event_info ul.event_info_list { border-top: solid 1px #ccc; border-bottom: solid 1px #ccc; }
+.testdrive_info_inner .event_info ul.event_info_list li { padding: 20px 10px; text-align: left; border-bottom: solid 1px #eeeeee; letter-spacing: -.5px; }
+.testdrive_info_inner .event_info ul.event_info_list li:last-child { border-bottom: none; }
+.testdrive_info_inner .event_info ul.event_info_list li .list_ti { float: left; width: 95px; font-size: 16px; color: #333; font-weight: 400; line-height: 1.4; }
+.testdrive_info_inner .event_info ul.event_info_list li .list_txt { float: left; width: calc(100% - 95px); font-size: 16px; color: #333; font-weight: 300; line-height: 1.4; }
+.testdrive_info_inner .event_info ul.event_info_list li .list_txt span { display: block; padding-top: 5px; font-size: 14px; color: #666; line-height: 1.3; word-spacing: -1px; }
+.testdrive_info_inner .event_info ul.event_info_list li:after { content: ""; display: block; clear: both; }
+.testdrive_info_inner .event_info ul.event_info_list li:nth-child(3) .list_txt span { display: block; padding-top: 5px; font-weight: 200; color: #666; font-size: 15px; line-height: 1.3; }
+.testdrive_info_inner .event_info ul.event_info_caption { padding: 15px 15px; font-size: 14px; }
+.testdrive_info_inner .event_info ul.event_info_caption li { margin-bottom: 5px; font-size: 15px; color: #999; font-weight: 200; line-height: 1.4; text-align: left; letter-spacing: -.5px; word-break: keep-all; }
+
+
+.box-ti .ti { margin-bottom: 40px; width: 100%; font-size: 28px; color: #333; font-weight: 400; text-align: center; }
+.box-ti .sti { margin-bottom: 8px; width: 100%; font-size: 20px; color: #003057; font-weight: 400; text-align: center; }
+
+
+section.accom { margin-bottom: 50px; }
+section.accom .accom_inner ul.accom_list:after { content: ""; display: block; clear: both; }
+section.accom .accom_inner ul.accom_list li { float: left; position: relative; width: 50%; max-height: 480px; overflow: hidden; cursor: pointer; letter-spacing: -.6px;  }
+section.accom .accom_inner ul.accom_list li .list_cont { position: absolute; bottom: 0; padding: 20px 0 0; width: 100%; text-align: center; background: rgba(0,0,0,.5); z-index: 10; }
+section.accom .accom_inner ul.accom_list li .list_cont .ti { margin-bottom: 10px; font-size: 17px; color: #fff; font-weight: 400; }
+section.accom .accom_inner ul.accom_list > li .list_cont .loc { margin-bottom: 5px; padding: 0 15px; font-size: 14px; color: #fff; font-weight: 300; line-height: 1.4; letter-spacing: -0.03em; }
+section.accom .accom_inner ul.accom_list li .list_cont .date { margin-bottom: 17px; font-size: 14px; color: #fff; font-weight: 300; line-height: 1.4; }
+section.accom .accom_inner ul.accom_list li .list_cont .btn_more a { font-size: 15px; color: #fff; font-weight: 400; }
+section.accom .accom_inner ul.accom_list li .list_cont .btn_more a span { display: inline-block; font-size: 18px; font-weight: 500; transform: scaleX(0.5); }
+section.accom .accom_inner ul.accom_list > li .list_cont .btn_more { margin-bottom: 20px; }
+section.accom .accom_inner ul.accom_list > li .list_cont ul.package { width: 100%; padding: 15px 0; background: rgba(0,0,0,.6); }
+section.accom .accom_inner ul.accom_list > li .list_cont ul.package li { float: none; width: 100%; font-size: 13px; color: rgba(255,255,255,.75); font-weight: 200; line-height: 1.6; word-break: keep-all; }
+section.accom .accom_inner ul.accom_list > li .list_cont ul.package li span { display: block; padding-top: 5px; }
+section.accom .accom_inner ul.accom_list li img { width: 100%; }
+
+#pop_accom { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.2); z-index: 20; letter-spacing: -.5px; word-break: keep-all; }
+#pop_accom .pop_accom_inner { position: absolute; top: 50%; left: 50%; padding: 30px 10px 20px; width: 96%; max-width: 1280px; max-height: 95vh; background: #fff; transform: translate(-50% , -50%); z-index: 22; }
+#pop_accom .pop_accom_inner .btn_close { position: absolute; top: 25px; right: 25px; }
+#pop_accom .pop_accom_inner ul.navigation { width: 56px; margin: 0 auto 15px; }
+#pop_accom .pop_accom_inner ul.navigation:after { content: ""; display: block; clear: both; }
+#pop_accom .pop_accom_inner ul.navigation li { width: 10px; height: 10px; background: #eee; float: left; border-radius: 50%; margin-right: 10px; }
+#pop_accom .pop_accom_inner ul.navigation li:last-child { margin-right: 0; }
+#pop_accom .pop_accom_inner ul.navigation li.active { background: #003057; }
+#pop_accom .pop_accom_inner ul.cont { width: 100%; }
+#pop_accom .pop_accom_inner ul.cont li { position: relative; }
+#pop_accom .pop_accom_inner ul.cont li .title { margin-bottom: 15px; width: 100%; font-weight: 400; font-size: 22px; color: #141414; text-align: center; }
+#pop_accom .pop_accom_inner ul.cont li.step_01 .step_01_cont { position: relative; width: 100%; }
+#pop_accom .pop_accom_inner ul.cont li.step_01 .step_01_cont_inner { position: absolute; bottom: 0; left: 0; padding: 30px 15px 0 20px; width: 100%; height: 200px; background: rgba(0,0,0,.7); }
+#pop_accom .pop_accom_inner ul.cont li.step_01 .step_01_cont .cont_ti { margin-bottom: 20px; font-size: 24px; font-weight: 400; color: #fff; }
+#pop_accom .pop_accom_inner ul.cont li.step_01 .step_01_cont .cont_ti:after { display: block; content: ""; width: 25px; height: 18px; border-bottom: solid 2px #fff; margin-left: 5px; }
+#pop_accom .pop_accom_inner ul.cont li.step_01 .step_01_cont .cont_txt { font-size: 15px; color: #fff; font-weight: 200; line-height: 1.6; }
+
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont { overflow-y: scroll; height: 60vh; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont_inner { position: relative; padding: 20px 5px 0; background: #fff; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .package {  }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .package_ti { font-size: 20px; font-weight: 400; margin-bottom: 15px; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .package_ti:before { display: block; content: ""; width: 25px; height: 8px; border-top: solid 2px #141414; line-height: 1.4; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont ul.package_list li { float: none; margin-bottom: 15px; height: 240px; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont ul li .img { width: 100%; height: 190px; background: #eee; overflow: hidden; background-position: center; background-size: cover; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont ul li .ti { font-size: 16px; font-weight: 300; line-height: 1.4; padding-top: 5px; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont ul li .txt { font-size: 14px; font-weight: 200; line-height: 1.4; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .cont_ti { margin-bottom: 5px; font-size: 20px; color: #141414; font-weight: 400; line-height: 1.3; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .cont_ti:before { display: block; content: ""; width: 25px; height: 18px; border-top: solid 2px #141414; line-height: 1.4; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .cont_ti span { display: inline-block; font-size: 16px; font-weight: 400; line-height: 1.6; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .cont_txt { margin-bottom: 22px; font-size: 16px; color: #141414; font-weight: 400; line-height: 1.5; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .option {  }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .option_ti { font-size: 20px; font-weight: 400; margin-bottom: 15px; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .option_ti:before { display: block; content: ""; width: 25px; height: 8px; border-top: solid 2px #141414; line-height: 1.4; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .option_ti span { font-size: 16px; font-weight: 200; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont ul.option_list li { float: none; margin-bottom: 15px; height: 240px; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont ul li .ti { font-size: 16px; font-weight: 300; line-height: 1.4; padding-top: 5px; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont ul li .txt { font-size: 14px; font-weight: 200; line-height: 1.4; }
+#pop_accom .pop_accom_inner ul.cont li.step_03 .step_03_cont .caption p { font-size: 13px; font-weight: 200; color: #999; line-height: 1.4; letter-spacing: -0.025em; padding-left: 17px; text-indent: -17px; margin-bottom: 7px; word-break: keep-all; }
+
+
+#pop_accom #accom_02 ul.cont li.step_03 .step_03_cont ul li .txt { letter-spacing: -0.08em; font-size: 13px; }
+
+
+#pop_accom #accom_01 ul.cont li.step_03 ul li.img_01 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_01.jpg); }
+#pop_accom #accom_01 ul.cont li.step_03 ul li.img_02 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_02.jpg); }
+#pop_accom #accom_01 ul.cont li.step_03 ul li.img_03 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_03.jpg); }
+#pop_accom #accom_01 ul.cont li.step_03 ul li.img_04 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_04.jpg); }
+#pop_accom #accom_01 ul.cont li.step_03 ul li.img_05 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_05.jpg); }
+#pop_accom #accom_01 ul.cont li.step_03 ul li.img_06 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_06.jpg); }
+#pop_accom #accom_01 ul.cont li.step_03 ul li.img_07 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_07.jpg); }
+
+#pop_accom #accom_02 ul.cont li.step_03 ul li.img_01 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_03_01.jpg); }
+#pop_accom #accom_02 ul.cont li.step_03 ul li.img_02 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_03_02.jpg); }
+#pop_accom #accom_02 ul.cont li.step_03 ul li.img_03 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_03_03.jpg); }
+#pop_accom #accom_02 ul.cont li.step_03 ul li.img_04 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_03_04.jpg); }
+#pop_accom #accom_02 ul.cont li.step_03 ul li.img_05 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_03_05.jpg); }
+#pop_accom #accom_02 ul.cont li.step_03 ul li.img_06 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_03_06.jpg); }
+#pop_accom #accom_02 ul.cont li.step_03 ul li.img_07 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_03_07.jpg); }
+
+#pop_accom #accom_03 ul.cont li.step_03 ul li.img_01 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_01.jpg); }
+#pop_accom #accom_03 ul.cont li.step_03 ul li.img_02 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_02.jpg); }
+#pop_accom #accom_03 ul.cont li.step_03 ul li.img_03 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_03.jpg); }
+#pop_accom #accom_03 ul.cont li.step_03 ul li.img_04 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_04.jpg); }
+#pop_accom #accom_03 ul.cont li.step_03 ul li.img_05 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_05.jpg); }
+#pop_accom #accom_03 ul.cont li.step_03 ul li.img_06 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_06.jpg); }
+#pop_accom #accom_03 ul.cont li.step_03 ul li.img_07 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_07.jpg); }
+#pop_accom #accom_03 ul.cont li.step_03 ul li.img_08 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_08.jpg); }
+
+#pop_accom #accom_04 ul.cont li.step_03 ul li.img_01 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_01.jpg); }
+#pop_accom #accom_04 ul.cont li.step_03 ul li.img_02 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_02.jpg); }
+#pop_accom #accom_04 ul.cont li.step_03 ul li.img_03 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_03.jpg); }
+#pop_accom #accom_04 ul.cont li.step_03 ul li.img_04 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_04.jpg); }
+#pop_accom #accom_04 ul.cont li.step_03 ul li.img_05 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_05.jpg); }
+#pop_accom #accom_04 ul.cont li.step_03 ul li.img_06 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_06.jpg); }
+#pop_accom #accom_04 ul.cont li.step_03 ul li.img_07 .img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_07.jpg); }
+
+
+#pop_accom #accom_01 ul.cont li.step_02 ul.photo_wrap { width: 100%; height: 60vh; overflow-y: scroll; }
+#pop_accom #accom_02 ul.cont li.step_02 ul.photo_wrap { width: 100%; height: 60vh; overflow-y: scroll; }
+#pop_accom #accom_03 ul.cont li.step_02 ul.photo_wrap { width: 100%; height: 60vh; overflow-y: scroll; }
+#pop_accom #accom_04 ul.cont li.step_02 ul.photo_wrap { width: 100%; height: 60vh; overflow-y: scroll; }
+
+#pop_accom .pop_accom_inner ul.cont li.step_01 .step_01_cont .step_01_cont_img { width: 100%; height: 60vh; background-position: center; background-size: auto 100%; }
+#pop_accom .pop_accom_inner ul.cont li.step_02 ul.photo_wrap li { width: 100%; height: 40vh; overflow: hidden; background-position: center; background-size: cover; }
+
+#pop_accom .pop_accom_inner ul.cont li.step_03 ul.photo_wrap { position: relative; width: 100%; height: 200px; }
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap { position: relative; width: 100%; height: 200px; }
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li { position: absolute; top: 0; left: 0; width: 100%; height: 200px; }
+#pop_accom #accom_02 ul.cont li.step_03 ul.photo_wrap { position: relative; width: 100%; height: 200px; }
+#pop_accom #accom_02 ul.cont li.step_03 ul.photo_wrap li { position: absolute; top: 0; left: 0; width: 100%; height: 200px; }
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap { position: relative; width: 100%; height: 200px; }
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li { position: absolute; top: 0; left: 0; width: 100%; height: 200px; }
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap { position: relative; width: 100%; height: 200px; }
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li { position: absolute; top: 0; left: 0; width: 100%; height: 200px; }
+
+
+#pop_accom #accom_01 ul.cont li.step_01 .step_01_cont_img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_01_01.jpg); }
+#pop_accom #accom_01 ul.cont li.step_02 ul.photo_wrap li.photo_01 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_02_01.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_02 ul.photo_wrap li.photo_02 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_02_02.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_02 ul.photo_wrap li.photo_03 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_02_03.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_02 ul.photo_wrap li.photo_04 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_02_04.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_02 ul.photo_wrap li.photo_05 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_02_05.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_02 ul.photo_wrap li.photo_06 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_02_06.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_02 ul.photo_wrap li.photo_07 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_02_07.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_02 ul.photo_wrap li.photo_08 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_02_08.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_02 ul.photo_wrap li.photo_09 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_02_09.jpg'); }
+
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li {position:absolute; top:0; left:0; animation-name: cf6FadeInOut; animation-duration: 18s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: alternate;}
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_01 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_01.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_02 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_02.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_03 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_03.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_04 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_04.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_05 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_05.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_06 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_01/accom_01_step_03_06.jpg'); }
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_01 { animation-delay: 0s; z-index:6;}
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_02 {	animation-delay: 3s; z-index:5;}
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_03 {	animation-delay: 6s; z-index:4;}
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_04 {	animation-delay: 9s; z-index:3;}
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_05 {	animation-delay: 12s; z-index:2;}
+#pop_accom #accom_01 ul.cont li.step_03 ul.photo_wrap li.photo_06 {	animation-delay: 15s; z-index:1;}
+
+
+#pop_accom #accom_02 ul.cont li.step_01 .step_01_cont_img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_01_01_mobile.jpg); background-size: cover; }
+#pop_accom #accom_02 ul.cont li.step_02 ul.photo_wrap li.photo_01 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_02_01.jpg'); }
+#pop_accom #accom_02 ul.cont li.step_02 ul.photo_wrap li.photo_02 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_02_02.jpg'); }
+#pop_accom #accom_02 ul.cont li.step_02 ul.photo_wrap li.photo_03 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_02_03.jpg'); }
+#pop_accom #accom_02 ul.cont li.step_02 ul.photo_wrap li.photo_04 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_02_04.jpg'); }
+#pop_accom #accom_02 ul.cont li.step_02 ul.photo_wrap li.photo_05 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_02_05.jpg'); }
+#pop_accom #accom_02 ul.cont li.step_02 ul.photo_wrap li.photo_06 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_02_06.jpg'); }
+
+#pop_accom #accom_02 ul.cont li.step_03 ul.photo_wrap li {position:absolute; top:0; left:0; animation-name: cf4FadeInOut; animation-duration: 12s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: alternate;}
+#pop_accom #accom_02 ul.cont li.step_03 ul.photo_wrap li.photo_01 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_03_01.jpg'); }
+#pop_accom #accom_02 ul.cont li.step_03 ul.photo_wrap li.photo_02 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_03_02.jpg'); }
+#pop_accom #accom_02 ul.cont li.step_03 ul.photo_wrap li.photo_03 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_03_03.jpg'); }
+#pop_accom #accom_02 ul.cont li.step_03 ul.photo_wrap li.photo_04 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_02/accom_02_step_03_04.jpg'); }
+#pop_accom #accom_02 ul.cont li.step_03 ul.photo_wrap li.photo_01 { animation-delay: 0s; z-index:6;}
+#pop_accom #accom_02 ul.cont li.step_03 ul.photo_wrap li.photo_02 {	animation-delay: 3s; z-index:5;}
+#pop_accom #accom_02 ul.cont li.step_03 ul.photo_wrap li.photo_03 {	animation-delay: 6s; z-index:4;}
+#pop_accom #accom_02 ul.cont li.step_03 ul.photo_wrap li.photo_04 {	animation-delay: 9s; z-index:3;}
+
+
+#pop_accom #accom_03 ul.cont li.step_01 .step_01_cont_img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_01_01_mobile.jpg); background-size: cover; }
+#pop_accom #accom_03 ul.cont li.step_02 ul.photo_wrap li.photo_01 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_02_01.jpg'); }
+#pop_accom #accom_03 ul.cont li.step_02 ul.photo_wrap li.photo_02 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_02_02.jpg'); }
+#pop_accom #accom_03 ul.cont li.step_02 ul.photo_wrap li.photo_03 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_02_03.jpg'); }
+#pop_accom #accom_03 ul.cont li.step_02 ul.photo_wrap li.photo_04 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_02_04.jpg'); }
+#pop_accom #accom_03 ul.cont li.step_02 ul.photo_wrap li.photo_05 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_02_05.jpg'); }
+#pop_accom #accom_03 ul.cont li.step_02 ul.photo_wrap li.photo_06 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_02_06.jpg'); }
+
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li { position: absolute; top: 0; left: 0; animation-name: cf6FadeInOut; animation-duration: 18s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: alternate; }
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_01 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_01.jpg'); }
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_02 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_02.jpg'); }
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_03 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_03.jpg'); }
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_04 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_04.jpg'); }
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_05 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_05.jpg'); }
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_06 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_03/accom_03_step_03_06.jpg'); }
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_01 { animation-delay: 0s; z-index:6;}
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_02 {	animation-delay: 3s; z-index:5;}
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_03 {	animation-delay: 6s; z-index:4;}
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_04 {	animation-delay: 9s; z-index:3;}
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_05 {	animation-delay: 12s; z-index:2;}
+#pop_accom #accom_03 ul.cont li.step_03 ul.photo_wrap li.photo_06 {	animation-delay: 15s; z-index:1;}
+
+
+#pop_accom #accom_04 ul.cont li.step_01 .step_01_cont_img { background-image: url(https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_01_01_mobile.jpg); background-size: cover; }
+#pop_accom #accom_04 ul.cont li.step_02 ul.photo_wrap li.photo_01 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_02_01.jpg'); }
+#pop_accom #accom_04 ul.cont li.step_02 ul.photo_wrap li.photo_02 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_02_02.jpg'); }
+#pop_accom #accom_04 ul.cont li.step_02 ul.photo_wrap li.photo_03 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_02_03.jpg'); }
+#pop_accom #accom_04 ul.cont li.step_02 ul.photo_wrap li.photo_04 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_02_04.jpg'); }
+#pop_accom #accom_04 ul.cont li.step_02 ul.photo_wrap li.photo_05 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_02_05.jpg'); }
+#pop_accom #accom_04 ul.cont li.step_02 ul.photo_wrap li.photo_06 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_02_06.jpg'); }
+
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li { position: absolute; top: 0; left: 0; animation-name: cf4FadeInOut; animation-duration: 12s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: alternate; }
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li.photo_01 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_01.jpg'); }
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li.photo_02 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_02.jpg'); }
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li.photo_03 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_03.jpg'); }
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li.photo_04 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_04.jpg'); }
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li.photo_05 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_05.jpg'); }
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li.photo_06 { background-image:url('https://vckiframe.com/event/hejfamilj_fall_2020/images/accom/accom_04/accom_04_step_03_06.jpg'); }
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li.photo_01 { animation-delay: 0s; z-index:6;}
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li.photo_02 {	animation-delay: 3s; z-index:5;}
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li.photo_03 {	animation-delay: 6s; z-index:4;}
+#pop_accom #accom_04 ul.cont li.step_03 ul.photo_wrap li.photo_04 {	animation-delay: 9s; z-index:3;}
+
+
+
+
+
+
+
+
+.slick-list { width: 100%; }
+
+
+@keyframes cf6FadeInOut {
+    0% { opacity: 1; }
+    8% { opacity: 1; }
+    16% { opacity: 0; }
+    84% { opacity: 0; }
+    92% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+@keyframes cf4FadeInOut {
+    0% { opacity: 1; }
+    8% { opacity: 1; }
+    16% { opacity: 0; }
+    84% { opacity: 0; }
+    92% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+
+@media (max-width: 374px) {
+    #pop_accom .pop_accom_inner ul.cont li.step_01 .step_01_cont .cont_txt { font-size: 14px; letter-spacing: -.8px; }
+
+    section.accom .accom_inner ul.accom_list > li .list_cont ul.package li { font-size: 12px; padding: 0 15px; }
+    section.accom .accom_inner ul.accom_list > li .list_cont ul.package li br { display: none; }
+}
+
+@media (max-width: 320px) {
+    #breadcrumb h4.response {word-spacing: -.8px; font-size: 18px; }
+}
+
+
