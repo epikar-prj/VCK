@@ -142,7 +142,7 @@
         <div class="inner">
             <strong>
                 현재 Hej Volvo App은 <br>
-                2.1.1 버전으로 업데이트 되었습니다. <br>
+                2.1.9 버전으로 업데이트 되었습니다. <br>
             </strong>
             <!--<p>
                 - 실시간 정비 알림 및 Push <br>
